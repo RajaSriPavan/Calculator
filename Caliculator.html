@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="height: 430px; background-image: url('https://static.vecteezy.com/system/resources/previews/000/113/753/original/vector-3d-colorful-math-symbols.jpg');">
+    <div class="container-fluid" style="width:300px;margin-right:auto ;margin-left: auto; height: 400px;outline: #99d39b solid 10px; border-radius: 25px; background-color: rgb(199, 204, 152);margin-top: 20%;">
+    <div style="text-size-adjust: 50%;">
+    <center>
+        <br>
+        <input type="text" id="n1"  placeholder=" Enter expression here" style="background-color: aquamarine;">
+        <br><br>
+        <input id="result" placeholder="result" style="width: 120px; background-color: rgb(221, 221, 177);"><span-2>    </span><span><input type="button" style="background-color: rgb(0, 195, 255);" value="=" onclick="calculate()"></span><br><br>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="operation('+')">+</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="operation('-')">-</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="operation('*')">&times;</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="operation('/')">&divide;</button><br/><br>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(7)" value="7">7</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(8)" value="8">8</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(9)" value="9">9</button><br><br>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(4)" value="4">4</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(5)" value="5">5</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(6)" value="6">6</button><br><br>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(1)" value="1">1</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(2)" value="2">2</button>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(3)" value="3">3</button><br><br>
+    <button type="button" class="btn btn-outline-secondary" style="background-color: rgb(0, 195, 255);" onclick="appendNumber(0)" value="0">0</button><br></center></div>
+    <br>
+    <script >
+        
+        function appendNumber(number) {
+  n1.value += number;
+}
+function operation(value) {
+            const n1 = document.getElementById("n1");
+            n1.value += value; 
+}
+function calculate() {
+            const n1 = document.getElementById("n1").value;
+            const result = eval(n1);
+            document.getElementById("result").value= result;
+        }
+
+    </script>
+    </div>
+</body>
+</html>
